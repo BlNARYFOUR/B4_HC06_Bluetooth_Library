@@ -1,0 +1,13 @@
+{
+  "name": "B4_HC06_BLUETOOTH",
+  "keywords": "communication, HC-06, Bluetooth",
+  "description": "Basic Bluetooth Library to work with Arduino and HC-06 Bluetooth module.",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/BlNARYFOUR/B4_HC06_Bluetooth_Library.git"
+  },
+  "version": "0.0.1",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
