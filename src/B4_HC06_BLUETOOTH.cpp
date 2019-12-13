@@ -16,14 +16,14 @@ B4Bluetooth::B4Bluetooth(unsigned short rx, unsigned short tx) : _bluetooth(rx, 
 String B4Bluetooth::getAvailableData() {
   static String res = "";
 
-  res = -1 < res.indexOf("\r\n") ? "" : res;
+  res = -1 < res.indexOf("\r\n") || -1 < res.indexOf("OK") ? "" : res;
   
   while(_bluetooth.available() > 0) {
     char c = _bluetooth.read();
     res += c;
   }
   
-  return -1 < res.indexOf("\r\n") ? res : "";
+  return -1 < res.indexOf("\r\n") || -1 < res.indexOf("OK") ? res : "";
 }
 
 void B4Bluetooth::begin(long speed) {
@@ -32,5 +32,9 @@ void B4Bluetooth::begin(long speed) {
 
 void B4Bluetooth::respond(String str) {
 	_bluetooth.println(str);
+}
+
+void B4Bluetooth::send(String str) {
+	_bluetooth.print(str);
 }
 

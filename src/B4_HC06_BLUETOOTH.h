@@ -20,6 +20,7 @@ class B4Bluetooth {
 	String getAvailableData();
 	void begin(long speed);
 	void respond(String str);
+	void send(String str);
 	
   private:
     SoftwareSerial _bluetooth;
