@@ -30,6 +30,10 @@ void B4Bluetooth::begin(long speed) {
 	_bluetooth.begin(speed);
 }
 
+void B4Bluetooth::end() {
+	_bluetooth.end();
+}
+
 void B4Bluetooth::respond(String str) {
 	_bluetooth.println(str);
 }

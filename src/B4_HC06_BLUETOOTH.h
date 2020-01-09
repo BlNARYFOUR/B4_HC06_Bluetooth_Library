@@ -19,6 +19,7 @@ class B4Bluetooth {
     void doBluetooth();
 	String getAvailableData();
 	void begin(long speed);
+	void end();
 	void respond(String str);
 	void send(String str);
 	
